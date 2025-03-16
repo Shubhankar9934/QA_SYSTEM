@@ -25,7 +25,7 @@ The system consists of several key components working together:
 
 Visual representations of these components can be found in the diagrams folder:
 
-### Data Ingestion Flow ([View Diagram](diagrams/data_ingestion.svg))
+### Data Ingestion Flow ((diagrams/data_ingestion.svg))
 The data ingestion flowchart illustrates how the system processes incoming documents:
 - Accepts PDF/Text input from users
 - Processes documents through the ingestion pipeline
@@ -33,7 +33,7 @@ The data ingestion flowchart illustrates how the system processes incoming docum
 - Stores raw data and generates processed text output
 - Prepares data for the embedding generation phase
 
-### Embedding System Flow ([View Diagram](diagrams/embedding.svg))
+### Embedding System Flow ((diagrams/embedding.svg))
 The embedding system flowchart shows the vector generation process:
 - Takes processed text as input
 - Generates vector embeddings using advanced NLP models
@@ -41,7 +41,7 @@ The embedding system flowchart shows the vector generation process:
 - Builds search indices for fast retrieval
 - Optimizes storage for quick access during query time
 
-### Model API Flow ([View Diagram](diagrams/model_api.svg))
+### Model API Flow (diagrams/model_api.svg))
 The Model API flowchart demonstrates the query processing pipeline:
 - Processes incoming user queries
 - Performs vector similarity search
@@ -49,7 +49,7 @@ The Model API flowchart demonstrates the query processing pipeline:
 - Retrieves relevant context from stored data
 - Generates final responses using the language model
 
-### Web Interface Flow ([View Diagram](diagrams/streamlit_app.svg))
+### Web Interface Flow (](diagrams/streamlit_app.svg))
 The Streamlit interface flowchart shows the user interaction flow:
 - Provides file upload functionality
 - Handles user query inputs
@@ -57,7 +57,7 @@ The Streamlit interface flowchart shows the user interaction flow:
 - Coordinates query processing
 - Displays responses and results to users
 
-### Complete System Architecture ([View Diagram](diagrams/system_architecture.svg))
+### Complete System Architecture ((diagrams/system_architecture.svg))
 The system architecture diagram provides a comprehensive view of how all components interact:
 - Shows the complete data flow from input to response
 - Illustrates component interactions and dependencies
