@@ -1,0 +1,75 @@
+%% Data Ingestion Component
+flowchart TD
+    A[User Input - PDF/Text] --> B[Data Ingestion]
+    B --> C[Text Chunking]
+    C --> D[Store Raw Data]
+    D --> E[Processed Text]
+```
+
+```mermaid
+%% Embedding Component
+flowchart TD
+    A1[Processed Text] --> B1[Embedding Generation]
+    B1 --> C1[Vector Store]
+    C1 --> D1[Index Creation]
+    D1 --> E1[Stored Embeddings]
+```
+
+```mermaid
+%% Model API Component
+flowchart TD
+    A2[User Query] --> B2[Model API]
+    B2 --> C2[Vector Search]
+    C2 --> D2[Query Embedding]
+    D2 --> E2[Context Retrieval]
+    E2 --> F2[Response Generation]
+```
+
+```mermaid
+%% StreamlitApp Component
+flowchart TD
+    A3[Web Interface] --> B3[File Upload]
+    A3 --> C3[Query Input]
+    B3 --> D3[Data Processing]
+    C3 --> E3[Query Processing]
+    D3 --> F3[Vector Storage]
+    E3 --> G3[Response Display]
+```
+
+```mermaid
+%% Complete System Architecture
+flowchart TD
+    subgraph UI[User Interface]
+        A[Web Interface]
+        B[File Upload]
+        C[Query Input]
+    end
+    
+    subgraph Processing[Data Processing]
+        D[Data Ingestion]
+        E[Text Chunking]
+        F[Embedding Generation]
+    end
+    
+    subgraph Storage[Vector Storage]
+        G[Vector Store]
+        H[Index Store]
+    end
+    
+    subgraph Query[Query Processing]
+        I[Query Embedding]
+        J[Context Retrieval]
+        K[Response Generation]
+    end
+    
+    A --> B
+    A --> C
+    B --> D
+    D --> E
+    E --> F
+    F --> G
+    G --> H
+    C --> I
+    I --> J
+    J --> K
+    K --> A
